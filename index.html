@@ -2,12 +2,44 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Javascript Drum Kit</title>
+    <title>Gio Ciudadano</title>
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="https://fav.farm/🐦" />
+    <link rel="icon" href="assets/icon.png" />
   </head>
   <body>
+    <div class="nav-banner" id="about-me">
+      <div class="nav-bar">
+        <div class="nav-bar-left">
+          <img class="icon" src="assets/icon.png" />
+          <div class="nav-bar-left-text">
+            <span class="nav-bar-left-title">Gio Ciudadano</span>
+            <span class="nav-bar-left-subtitle"
+              >Beyond Software Engineering</span
+            >
+          </div>
+        </div>
+
+        <div class="nav-bar-right">
+          <span class="nav-button about-me" onclick="navigateAboutMe()"
+            >About Me</span
+          >
+          <span class="nav-button education" onclick="navigateEducation()"
+            >Education</span
+          >
+          <span class="nav-button skills" onclick="navigateSkills()"
+            >Skills</span
+          >
+          <span class="nav-button projects" onclick="navigateProjects()"
+            >Projects</span
+          >
+          <span class="nav-button contact" onclick="navigateContact()"
+            >Contact</span
+          >
+        </div>
+      </div>
+    </div>
+
     <div class="video-banner">
       <div class="video-background-gradient"></div>
       <iframe
@@ -17,6 +49,55 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
+    </div>
+
+    <div class="info-banner">
+      <div class="info-banner-left">
+        <div class="info-banner-title">Hi, my name is Gio Ciudadano!</div>
+        <div class="info-banner-subtitle">SOFTWARE ENGINEER INTERN</div>
+        <div class="info-banner-desc">
+          I am an undergraduate student with experience in developing and
+          maintaining applications. I specialize working in game development,
+          mobile applications, database management, and machine learning. My
+          experience also includes collaborating with teams to deliver software
+          on-time and within budget.
+        </div>
+        <div class="media-icons">
+          <a href="https://www.linkedin.com/in/gcciudadano"
+            ><img class="media-icon" src="assets/icons8-linkedin-48.png"
+          /></a>
+          <a href="https://www.behance.net/giociudadano"
+            ><img class="media-icon" src="assets/icons8-behance-48.png"
+          /></a>
+          <a href="https://www.github.com/giociudadano">
+            <img class="media-icon" src="assets/icons8-github-48.png" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section education-banner" id="education">
+      <div class="section-header">
+        <span class="section-title">Education</span>
+      </div>
+    </div>
+
+    <div class="section skills-banner" id="skills">
+      <div class="section-header">
+        <span class="section-title">Skills</span>
+      </div>
+    </div>
+
+    <div class="section projects-banner" id="projects">
+      <div class="section-header">
+        <span class="section-title">Projects</span>
+      </div>
+    </div>
+
+    <div class="section contact-banner" id="contact">
+      <div class="section-header">
+        <span class="section-title">Contact</span>
+      </div>
     </div>
   </body>
 </html>

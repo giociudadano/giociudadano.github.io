@@ -1,15 +1,34 @@
-const backgroundGradient = document.querySelector('.video-background-gradient');
-function updateGradient() {
-  const gradientRotation = getComputedStyle(
-    document.documentElement
-  ).getPropertyValue('--gradient-rotation');
-  const gradientRotationValue = gradientRotation.slice(
-    0,
-    gradientRotation.length - 3
-  );
-  document.documentElement.style.setProperty(
-    `--gradient-rotation`,
-    ((Number(gradientRotationValue) + 5) % 360) + 'deg'
-  );
+function navigateAboutMe() {
+  document
+    .getElementById('about-me')
+    .scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
-setInterval(updateGradient, 1000);
+
+function navigateEducation() {
+  document
+    .getElementById('education')
+    .scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function navigateSkills() {
+  document
+    .getElementById('skills')
+    .scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function navigateProjects() {
+  document
+    .getElementById('projects')
+    .scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function navigateContact() {
+  document
+    .getElementById('contact')
+    .scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+window.addEventListener('scroll', event => {
+  let scroll = this.scrollY;
+  console.log(scroll);
+});
