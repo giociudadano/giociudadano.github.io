@@ -10,6 +10,12 @@ function navigateEducation() {
     .scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+function navigateExperience() {
+  document
+    .getElementById('experience')
+    .scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
 function navigateSkills() {
   document
     .getElementById('skills')

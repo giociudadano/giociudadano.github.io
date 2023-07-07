@@ -4,6 +4,18 @@ body {
   background-color: rgb(32, 32, 35);
 }
 
+ul,
+li {
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+.about-me {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 .icon {
   height: 80px;
   width: 80px;
@@ -11,6 +23,7 @@ body {
 
 .nav-banner {
   margin-top: 50px;
+  vertical-align: auto;
 }
 
 .nav-bar {
@@ -35,11 +48,11 @@ body {
   display: block;
   text-align: left;
   text-transform: uppercase;
-  font-family: 'Bahnschrift';
+  font-family: 'Bahnschrift Semicondensed';
   font-weight: 800;
-  font-size: 32px;
+  font-size: 2em;
   color: rgb(245, 245, 245);
-  letter-spacing: -1.5px;
+  letter-spacing: 1.5px;
   margin-top: 15px;
   padding-bottom: 0px;
 }
@@ -47,9 +60,9 @@ body {
 .nav-bar-left-subtitle {
   text-transform: uppercase;
   font-family: 'Bahnschrift Condensed';
-  font-weight: 400;
+  font-weight: 600;
   font-size: 14px;
-  color: rgb(225, 225, 225);
+  color: rgb(215, 215, 215);
   letter-spacing: 1.2px;
   display: block;
   margin-top: -5px;
@@ -62,18 +75,23 @@ body {
 }
 
 .nav-button {
-  font-family: 'Bahnschrift Condensed';
-  font-weight: 300;
+  font-family: 'Bahnschrift';
+  font-weight: 400;
   font-size: 16px;
   color: rgb(225, 225, 225);
-  letter-spacing: 0.6px;
-  margin: 0px 30px;
+  margin: 0px max(20px, 2%);
+  letter-spacing: -0.5px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  color: rgb(235, 175, 255);
 }
 
 .video-banner {
   position: absolute;
   top: 0;
-  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -85,7 +103,7 @@ body {
     -45deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(9, 9, 121, 1) 35%,
-    rgba(192, 0, 255, 1) 100%
+    rgb(107, 0, 143) 100%
   );
   background-size: 300% 300%;
   height: 100vh;
@@ -144,16 +162,25 @@ body {
 .info-banner-subtitle {
   margin-top: 10px;
   font-family: 'Bahnschrift Condensed';
-  font-weight: 600;
+  font-weight: 800;
   font-size: 20px;
-  color: rgb(138, 143, 239);
+  background-image: linear-gradient(
+    -45deg,
+    rgb(85, 153, 255) 0%,
+    rgb(220, 114, 255) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   max-width: 600px;
   letter-spacing: 1px;
 }
 
 .info-banner-desc {
   margin-top: 10px;
-  font-family: 'Bahnschrift';
+  font-family: 'Bahnschrift Semicondensed';
   font-weight: 200;
   font-size: 14px;
   color: rgb(215, 215, 215);
@@ -172,34 +199,338 @@ body {
   margin: 0px 10px 0px 0px;
   height: 32px;
   width: 32px;
+  opacity: 50%;
 }
 
-.section {
-  padding-top: 100px;
-  height: 200vh;
+.media-icon:hover {
+  opacity: 100%;
+}
+
+.view-works {
+  margin-top: 30px;
+}
+
+.view-works-button {
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(
+      -45deg,
+      rgb(85, 153, 255) 0%,
+      rgb(220, 114, 255) 100%
+    )
+    1;
+  padding: 10px 10px;
+}
+
+.view-works-text {
+  font-family: 'Bahnschrift';
+  font-weight: 800;
+  font-size: 16px;
+  background-image: linear-gradient(
+    -45deg,
+    rgb(85, 153, 255) 0%,
+    rgb(220, 114, 255) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  padding: 5px 10px;
+  cursor: pointer;
+  letter-spacing: -0.5px;
+}
+
+.view-works-button:hover {
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(
+      45deg,
+      rgb(85, 153, 255) 0%,
+      rgb(220, 114, 255) 100%
+    )
+    1;
+  padding: 10px 10px;
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.view-works-text:hover {
+  font-family: 'Bahnschrift';
+  font-weight: 800;
+  font-size: 16px;
+  background-image: linear-gradient(
+    45deg,
+    rgb(85, 153, 255) 0%,
+    rgb(220, 114, 255) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+
+  padding: 5px 10px;
+  cursor: pointer;
+  letter-spacing: -0.5px;
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.big-banner {
+  margin-top: 50px;
+  height: 100vh;
+}
+
+.big-banner-row {
+  margin: auto;
+  width: 85%;
 }
 
 .education-banner {
-  margin-top: 300px;
+  width: max(30%, 320px);
+  float: left;
 }
 
-.skills-banner {
-  background-color: rgb(42, 42, 48);
+.projects-banner {
+  float: left;
 }
 
-.contact-banner {
-  background-color: rgb(42, 42, 48);
+.section {
+  margin: 10px;
 }
 
 .section-header {
-  margin: auto;
-  width: 50%;
-  text-align: center;
+  text-align: left;
+  margin: 40px 0px 20px 0px;
 }
 
 .section-title {
-  font-family: 'Bahnschrift';
+  font-family: 'Bahnschrift Semicondensed';
   font-weight: 600;
-  font-size: 36px;
+  font-size: 28px;
   color: rgb(245, 245, 245);
+}
+
+.section-tc-entry {
+  margin-top: 10px;
+  display: flex;
+  flex: 1;
+  align-items: start;
+}
+
+.section-tc-entry-right > span {
+  display: block;
+}
+
+.section-tc-entry-right > span > h1 {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(245, 245, 245);
+  margin: 0;
+  line-height: 0.95;
+}
+
+.section-tc-entry-right > span > h2 {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(215, 215, 215);
+  margin: 0;
+}
+
+.section-tc-entry-right > span > h3 {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 300;
+  font-size: 14px;
+  color: rgb(185, 185, 185);
+  margin: 0;
+}
+
+.school-icon {
+  width: 60px;
+  height: 60px;
+  margin: 12px;
+}
+
+.section-tc-tags {
+  max-width: 300px;
+}
+
+.section-tc-tags > span {
+  padding: 3px 15px;
+  background-color: rgba(235, 235, 235, 0.2);
+  border-radius: 10% / 50%;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.section-tc-tags > span > span {
+  font-family: 'Bahnschrift';
+  font-weight: 400;
+  font-size: 13px;
+  color: rgb(225, 225, 225);
+  letter-spacing: -0.5px;
+}
+
+.experience-card {
+  float: left;
+  padding: 10px;
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-bottom: 20px;
+}
+
+.experience-card:hover {
+  transform: scale(1.05);
+  background-color: rgba(245, 245, 245, 0.1);
+  border-radius: 10px 5px;
+}
+
+.experience-card > .time {
+  float: left;
+  width: 120px;
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 400;
+  font-size: 13px;
+  color: rgb(175, 175, 175);
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.experience-card > .desc {
+  float: left;
+  width: 200px;
+}
+
+.experience-card > .desc > .title {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(245, 245, 245);
+  margin: 0;
+  line-height: 0.95;
+}
+
+.experience-card:hover > .desc > .title {
+  color: rgb(235, 175, 255);
+}
+.experience-card:hover > .desc > .external-link {
+  color: rgb(235, 175, 255);
+  transform: translate(3px, -3px);
+}
+
+.experience-card > .desc > h3 {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 300;
+  font-size: 14px;
+  color: rgb(185, 185, 185);
+  margin-top: 10px;
+}
+
+.section-one-column {
+  margin-top: 40px;
+}
+
+.section-one-column > h2 {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(215, 215, 215);
+  letter-spacing: -0.5px;
+}
+
+.section-mc-entry {
+  margin: 20px 10px;
+  padding: 5px;
+  float: left;
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.section-mc-entry:hover {
+  transform: scale(1.05);
+  background-color: rgba(245, 245, 245, 0.1);
+  border-radius: 2%;
+}
+
+.section-mc-thumb {
+  width: 300px;
+  height: 180px;
+  border-radius: 5%;
+  margin-bottom: 10px;
+}
+
+.section-mc-info {
+  margin: 5px 10px;
+  max-width: 250px;
+}
+
+.section-mc-info > span > .section-mc-title {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(245, 245, 245);
+}
+
+.section-mc-entry:hover > .section-mc-info > span > .section-mc-title {
+  color: rgb(235, 175, 255);
+}
+
+.external-link {
+  display: inline-block;
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 100;
+  color: rgb(215, 215, 215);
+  font-size: 12px;
+  transition: all 0.1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.section-mc-entry:hover > .section-mc-info > span > .external-link {
+  color: rgb(235, 175, 255);
+  transform: translate(3px, -3px);
+}
+
+.section-mc-info > span > h3 {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 300;
+  font-size: 14px;
+  color: rgb(185, 185, 185);
+  margin: 10px 0px;
+  text-align: justify;
+}
+
+.section-mc-tags {
+  margin-top: 20px;
+}
+
+.section-mc-tags > span {
+  padding: 3px 15px;
+  background-image: linear-gradient(
+    45deg,
+    rgba(85, 153, 255, 0.2) 0%,
+    rgba(220, 114, 255, 0.2) 100%
+  );
+  border-radius: 10% / 50%;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.section-mc-tags > span > span {
+  font-family: 'Bahnschrift';
+  font-weight: 800;
+  font-size: 13px;
+  background-image: linear-gradient(
+    45deg,
+    rgb(85, 153, 255) 0%,
+    rgb(220, 114, 255) 100%
+  );
+  letter-spacing: -0.5px;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }

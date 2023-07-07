@@ -8,95 +8,245 @@
     <link rel="icon" href="assets/icon.png" />
   </head>
   <body>
-    <div class="nav-banner" id="about-me">
-      <div class="nav-bar">
-        <div class="nav-bar-left">
-          <img class="icon" src="assets/icon.png" />
-          <div class="nav-bar-left-text">
-            <span class="nav-bar-left-title">Gio Ciudadano</span>
-            <span class="nav-bar-left-subtitle"
-              >Beyond Software Engineering</span
+    <div class="about-me">
+      <div class="nav-banner" id="about-me">
+        <div class="nav-bar">
+          <div class="nav-bar-left">
+            <img class="icon" src="assets/icon.png" />
+            <div class="nav-bar-left-text">
+              <span class="nav-bar-left-title">Gio Ciudadano</span>
+              <span class="nav-bar-left-subtitle"
+                >Beyond Software Engineering</span
+              >
+            </div>
+          </div>
+
+          <div class="nav-bar-right">
+            <span class="nav-button about-me" onclick="navigateAboutMe()"
+              >About Me</span
+            >
+            <span class="nav-button education" onclick="navigateEducation()"
+              >Education</span
+            >
+
+            <span class="nav-button projects" onclick="navigateProjects()"
+              >Experience</span
+            >
+
+            <span class="nav-button projects" onclick="navigateProjects()"
+              >Projects</span
+            >
+
+            <span class="nav-button skills" onclick="navigateSkills()"
+              >Skills</span
+            >
+
+            <span class="nav-button contact" onclick="navigateContact()"
+              >Contact</span
             >
           </div>
         </div>
+      </div>
 
-        <div class="nav-bar-right">
-          <span class="nav-button about-me" onclick="navigateAboutMe()"
-            >About Me</span
-          >
-          <span class="nav-button education" onclick="navigateEducation()"
-            >Education</span
-          >
-          <span class="nav-button skills" onclick="navigateSkills()"
-            >Skills</span
-          >
-          <span class="nav-button projects" onclick="navigateProjects()"
-            >Projects</span
-          >
-          <span class="nav-button contact" onclick="navigateContact()"
-            >Contact</span
-          >
+      <div class="video-banner">
+        <div class="video-background-gradient"></div>
+        <iframe
+          class="video-background"
+          src="https://www.youtube.com/embed/uvcxiYZRInE?start=504&autoplay=1&mute=1&controls=0"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="info-banner">
+        <div class="info-banner-left">
+          <div class="info-banner-title">Hi, my name is Gio Ciudadano!</div>
+          <div class="info-banner-subtitle">SOFTWARE ENGINEER INTERN</div>
+          <div class="info-banner-desc">
+            I am an undergraduate student with experience in developing and
+            maintaining applications. I specialize working in game development,
+            mobile applications, database management, and machine learning. My
+            experience also includes collaborating with teams to deliver
+            software on-time and within budget.
+          </div>
+          <div class="media-icons">
+            <a href="https://www.linkedin.com/in/gcciudadano"
+              ><img class="media-icon" src="assets/icons8-linkedin-48.png"
+            /></a>
+            <a href="https://www.behance.net/giociudadano"
+              ><img class="media-icon" src="assets/icons8-behance-48.png"
+            /></a>
+            <a href="https://www.github.com/giociudadano">
+              <img class="media-icon" src="assets/icons8-github-48.png" />
+            </a>
+          </div>
+          <div class="view-works">
+            <span class="view-works-button" onclick="navigateProjects()"
+              ><span class="view-works-text">View Works</span></span
+            >
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="video-banner">
-      <div class="video-background-gradient"></div>
-      <iframe
-        class="video-background"
-        src="https://www.youtube.com/embed/uvcxiYZRInE?start=504&autoplay=1&mute=1&controls=0"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
-
-    <div class="info-banner">
-      <div class="info-banner-left">
-        <div class="info-banner-title">Hi, my name is Gio Ciudadano!</div>
-        <div class="info-banner-subtitle">SOFTWARE ENGINEER INTERN</div>
-        <div class="info-banner-desc">
-          I am an undergraduate student with experience in developing and
-          maintaining applications. I specialize working in game development,
-          mobile applications, database management, and machine learning. My
-          experience also includes collaborating with teams to deliver software
-          on-time and within budget.
+    <div class="big-banner">
+      <div class="big-banner-row">
+        <div class="section education-banner" id="education">
+          <div class="section-header">
+            <span class="section-title">Education</span>
+          </div>
+          <div class="section-two-column">
+            <div class="section-tc-entry">
+              <div class="section-tc-entry-left">
+                <a href="https://up.edu.ph/"
+                  ><img class="school-icon" src="assets/school-up.png"
+                /></a>
+              </div>
+              <div class="section-tc-entry-right">
+                <span><h1>University of the Philippines</h1></span>
+                <span><h2>Bachelor of Science in Computer Science</h2></span>
+                <span><h3>Graduating in May 2024</h3></span>
+                <span><h3>2020 - 2024</h3></span>
+              </div>
+            </div>
+            <div class="section-tc-entry">
+              <div class="section-tc-entry-left">
+                <a href="https://www.upv.edu.ph/">
+                  <img class="school-icon" src="assets/school-upv.png" />
+                </a>
+              </div>
+              <div class="section-tc-entry-right">
+                <span
+                  ><h1>
+                    University of the Philippines <br />
+                    High School in Iloilo
+                  </h1></span
+                >
+                <span><h2>Accountancy, Business, and Management</h2></span>
+                <span><h3>With Honors</h3></span>
+                <span><h3>2018 - 2020</h3></span>
+              </div>
+            </div>
+            <div class="section-tc-entry">
+              <div class="section-tc-entry-left">
+                <a href="https://www.facebook.com/capiznhssstc">
+                  <img class="school-icon" src="assets/school-sstc.png" />
+                </a>
+              </div>
+              <div class="section-tc-entry-right">
+                <span><h1>Capiz National High School</h1></span>
+                <span><h2>Special Science and Technology Class</h2></span>
+                <span><h3>With Honors</h3></span>
+                <span><h3>2014 - 2018</h3></span>
+              </div>
+            </div>
+          </div>
+          <div class="section-two-column">
+            <div class="section-header">
+              <span class="section-title" id="experience">Experience</span>
+            </div>
+            <div class="experience-card">
+              <div class="time">JUN 2023 — PRESENT</div>
+              <div class="desc">
+                <span class="title"
+                  >Software Developer-Intern • DTE Endurance Asia</span
+                >
+                <span class="external-link">🡭</span>
+                <h3>
+                  Developing high-quality and responsive web application that
+                  supports high traffic for clients in Asia.
+                </h3>
+                <div class="section-mc-tags">
+                  <span><span>HTML</span></span>
+                  <span><span>CSS</span></span>
+                  <span><span>JavaScript</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-one-column">
+            <div class="section-header">
+              <span class="section-title" id="skills">Skills</span>
+            </div>
+            <h2>Programming Languages</h2>
+            <div class="section-tc-tags">
+              <span><span>HTML</span></span>
+              <span><span>CSS</span></span>
+              <span><span>JavaScript</span></span>
+              <span><span>Python</span></span>
+              <span><span>C/C++</span></span>
+              <span><span>Java</span></span>
+              <span><span>SQL</span></span>
+            </div>
+            <h2>Libraries and Frameworks</h2>
+            <div class="section-tc-tags">
+              <span><span>Flutter</span></span>
+              <span><span>Firebase</span></span>
+              <span><span>Git</span></span>
+            </div>
+          </div>
         </div>
-        <div class="media-icons">
-          <a href="https://www.linkedin.com/in/gcciudadano"
-            ><img class="media-icon" src="assets/icons8-linkedin-48.png"
-          /></a>
-          <a href="https://www.behance.net/giociudadano"
-            ><img class="media-icon" src="assets/icons8-behance-48.png"
-          /></a>
-          <a href="https://www.github.com/giociudadano">
-            <img class="media-icon" src="assets/icons8-github-48.png" />
-          </a>
+
+        <div class="section projects-banner" id="projects">
+          <div class="section-header">
+            <span class="section-title">Projects</span>
+            <div class="section-multi-column">
+              <div class="section-mc-entry">
+                <a href="https://github.com/giociudadano/vtuber-rush">
+                  <img class="section-mc-thumb" src="assets/thumb-vtrush.png" />
+                </a>
+                <div class="section-mc-info">
+                  <span>
+                    <span class="section-mc-title"
+                      >VTuber Rush! - A Tower Defense Game</span
+                    >
+                    <span class="external-link">🡭</span>
+                  </span>
+                  <span
+                    ><h3>
+                      A real-time strategy video game. Use six different
+                      characters to defend against an endless wave of enemies
+                      and strategize your way to victory! Features a built-in
+                      level and wave editor.
+                    </h3></span
+                  >
+                  <div class="section-mc-tags">
+                    <span> <span>Java</span></span>
+                    <span><span>Video Games</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="section-mc-entry">
+                <a href="https://github.com/giociudadano/echo">
+                  <img class="section-mc-thumb" src="assets/thumb-echo.png" />
+                </a>
+                <div class="section-mc-info">
+                  <span
+                    ><span class="section-mc-title">
+                      Echo - A Collaborative Cross-Platform Note-Taking App
+                    </span>
+                    <span class="external-link">🡭</span></span
+                  >
+
+                  <span
+                    ><h3>
+                      A cross-platform web and mobile note-taking application.
+                      Create a group with your friends or family, write notes,
+                      and share it to other users in real-time.
+                    </h3></span
+                  >
+                  <div class="section-mc-tags">
+                    <span> <span>Dart</span></span>
+                    <span><span>Flutter</span></span>
+                    <span><span>Firebase</span></span>
+                    <span><span>Productivity</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-
-    <div class="section education-banner" id="education">
-      <div class="section-header">
-        <span class="section-title">Education</span>
-      </div>
-    </div>
-
-    <div class="section skills-banner" id="skills">
-      <div class="section-header">
-        <span class="section-title">Skills</span>
-      </div>
-    </div>
-
-    <div class="section projects-banner" id="projects">
-      <div class="section-header">
-        <span class="section-title">Projects</span>
-      </div>
-    </div>
-
-    <div class="section contact-banner" id="contact">
-      <div class="section-header">
-        <span class="section-title">Contact</span>
       </div>
     </div>
   </body>
