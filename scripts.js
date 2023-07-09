@@ -34,7 +34,14 @@ function navigateContact() {
     .scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-window.addEventListener('scroll', event => {
-  let scroll = this.scrollY;
-  console.log(scroll);
-});
+function updateScrollbar(e) {
+  const navBarPost = document.querySelector('.nav-bar-post');
+  let scrollYPos = this.scrollY;
+  if (scrollYPos > 200) {
+    navBarPost.classList.add('shown');
+  } else {
+    navBarPost.classList.remove('shown');
+  }
+}
+
+window.addEventListener('scroll', updateScrollbar);

@@ -8,29 +8,61 @@
     <link rel="icon" href="assets/icon.png" />
   </head>
   <body>
+    <div class="nav-bar-post">
+      <ul>
+        <li style="margin-left: 12vw">
+          <div class="logo">
+            <a href="https://giociudadano.github.io">
+              <img src="assets/icon.png" />
+              <span>Gio Ciudadano</span></a
+            >
+          </div>
+          >
+        </li>
+        <li style="float: right" class="last-right">
+          <a onclick="navigateContact()">Contact</a>
+        </li>
+        <li style="float: right"><a onclick="navigateSkills()">Skills</a></li>
+        <li style="float: right">
+          <a onclick="navigateProjects()">Projects</a>
+        </li>
+        <li style="float: right">
+          <a onclick="navigateEducation()">Education</a>
+        </li>
+        <li style="float: right">
+          <a onclick="navigateExperience()">Experience</a>
+        </li>
+        <li style="float: right">
+          <a onclick="navigateAboutMe()">About Me</a>
+        </li>
+      </ul>
+    </div>
+
     <div class="about-me">
       <div class="nav-banner" id="about-me">
         <div class="nav-bar">
-          <div class="nav-bar-left">
-            <img class="icon" src="assets/icon.png" />
-            <div class="nav-bar-left-text">
-              <span class="nav-bar-left-title">Gio Ciudadano</span>
-              <span class="nav-bar-left-subtitle"
-                >Beyond Software Engineering</span
-              >
+          <a href="https://giociudadano.github.io">
+            <div class="nav-bar-left">
+              <img class="icon" src="assets/icon.png" />
+              <div class="nav-bar-left-text">
+                <span class="nav-bar-left-title">Gio Ciudadano</span>
+                <span class="nav-bar-left-subtitle"
+                  >Beyond Software Engineering</span
+                >
+              </div>
             </div>
-          </div>
+          </a>
 
           <div class="nav-bar-right">
             <span class="nav-button about-me" onclick="navigateAboutMe()"
               >About Me</span
             >
+
+            <span class="nav-button experience" onclick="navigateExperience()"
+              >Experience</span
+            >
             <span class="nav-button education" onclick="navigateEducation()"
               >Education</span
-            >
-
-            <span class="nav-button projects" onclick="navigateProjects()"
-              >Experience</span
             >
 
             <span class="nav-button projects" onclick="navigateProjects()"
@@ -81,9 +113,9 @@
               <img class="media-icon" src="assets/icons8-github-48.png" />
             </a>
           </div>
-          <div class="view-works">
-            <span class="view-works-button" onclick="navigateProjects()"
-              ><span class="view-works-text">View Works</span></span
+          <div class="main-interact">
+            <span class="main-interact-button" onclick="navigateProjects()"
+              ><span class="main-interact-text">View Works</span></span
             >
           </div>
         </div>
@@ -93,6 +125,52 @@
     <div class="big-banner">
       <div class="big-banner-row">
         <div class="section education-banner" id="education">
+          <div class="section-two-column">
+            <div class="section-header">
+              <span class="section-title" id="experience">Experience</span>
+            </div>
+            <div class="experience-card">
+              <div class="time">JUN 2023 — PRESENT</div>
+              <div class="desc">
+                <span class="title">
+                  <a href="https://dteendurance.com/"
+                    >Software Developer-Intern • DTE Endurance Asia</a
+                  ></span
+                >
+                <span class="external-link">🡭</span>
+                <h3>
+                  Developing high-quality and responsive web application that
+                  supports high traffic for clients in Asia.
+                </h3>
+                <div class="section-mc-tags">
+                  <span><span>HTML</span></span>
+                  <span><span>CSS</span></span>
+                  <span><span>JavaScript</span></span>
+                </div>
+              </div>
+            </div>
+            <div class="experience-card">
+              <div class="time">MAR 2022 — PRESENT</div>
+              <div class="desc">
+                <span class="title">
+                  <a href="https://www.facebook.com/upvdiwataesports"
+                    >Graphic Designer & Social Media Manager • UPV Diwata
+                    Esports</a
+                  ></span
+                >
+                <span class="external-link">🡭</span>
+                <h3>
+                  Working as a concept artist, graphic designer, and social
+                  media manager for the university's esports organization, which
+                  fields teams for video games watched by hundreds of thousands
+                  of spectators around the world.
+                </h3>
+                <div class="section-mc-tags">
+                  <span><span>Graphic Design</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="section-header">
             <span class="section-title">Education</span>
           </div>
@@ -142,29 +220,6 @@
               </div>
             </div>
           </div>
-          <div class="section-two-column">
-            <div class="section-header">
-              <span class="section-title" id="experience">Experience</span>
-            </div>
-            <div class="experience-card">
-              <div class="time">JUN 2023 — PRESENT</div>
-              <div class="desc">
-                <span class="title"
-                  >Software Developer-Intern • DTE Endurance Asia</span
-                >
-                <span class="external-link">🡭</span>
-                <h3>
-                  Developing high-quality and responsive web application that
-                  supports high traffic for clients in Asia.
-                </h3>
-                <div class="section-mc-tags">
-                  <span><span>HTML</span></span>
-                  <span><span>CSS</span></span>
-                  <span><span>JavaScript</span></span>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="section-one-column">
             <div class="section-header">
               <span class="section-title" id="skills">Skills</span>
@@ -191,59 +246,107 @@
         <div class="section projects-banner" id="projects">
           <div class="section-header">
             <span class="section-title">Projects</span>
-            <div class="section-multi-column">
-              <div class="section-mc-entry">
+          </div>
+          <div class="section-multi-column">
+            <div class="section-mc-entry">
+              <a href="https://github.com/giociudadano/vtuber-rush">
+                <img class="section-mc-thumb" src="assets/thumb-vtrush.png" />
+              </a>
+              <div class="section-mc-info">
                 <a href="https://github.com/giociudadano/vtuber-rush">
-                  <img class="section-mc-thumb" src="assets/thumb-vtrush.png" />
-                </a>
-                <div class="section-mc-info">
                   <span>
                     <span class="section-mc-title"
                       >VTuber Rush! - A Tower Defense Game</span
                     >
                     <span class="external-link">🡭</span>
                   </span>
-                  <span
-                    ><h3>
-                      A real-time strategy video game. Use six different
-                      characters to defend against an endless wave of enemies
-                      and strategize your way to victory! Features a built-in
-                      level and wave editor.
-                    </h3></span
-                  >
-                  <div class="section-mc-tags">
-                    <span> <span>Java</span></span>
-                    <span><span>Video Games</span></span>
-                  </div>
+                </a>
+                <span
+                  ><h3>
+                    A real-time strategy video game. Use six different
+                    characters to defend against an endless wave of enemies and
+                    strategize your way to victory! Features a built-in level
+                    and wave editor.
+                  </h3></span
+                >
+                <div class="section-mc-tags">
+                  <span> <span>Java</span></span>
+                  <span><span>Video Games</span></span>
                 </div>
               </div>
-              <div class="section-mc-entry">
+            </div>
+            <div class="section-mc-entry">
+              <a href="https://github.com/giociudadano/echo">
+                <img class="section-mc-thumb" src="assets/thumb-echo.png" />
+              </a>
+              <div class="section-mc-info">
                 <a href="https://github.com/giociudadano/echo">
-                  <img class="section-mc-thumb" src="assets/thumb-echo.png" />
-                </a>
-                <div class="section-mc-info">
                   <span
                     ><span class="section-mc-title">
                       Echo - A Collaborative Cross-Platform Note-Taking App
                     </span>
                     <span class="external-link">🡭</span></span
                   >
-
-                  <span
-                    ><h3>
-                      A cross-platform web and mobile note-taking application.
-                      Create a group with your friends or family, write notes,
-                      and share it to other users in real-time.
-                    </h3></span
-                  >
-                  <div class="section-mc-tags">
-                    <span> <span>Dart</span></span>
-                    <span><span>Flutter</span></span>
-                    <span><span>Firebase</span></span>
-                    <span><span>Productivity</span></span>
-                  </div>
+                </a>
+                <span
+                  ><h3>
+                    A cross-platform web and mobile note-taking application.
+                    Create a group with your friends or family, write notes, and
+                    share it to other users in real-time.
+                  </h3></span
+                >
+                <div class="section-mc-tags">
+                  <span> <span>Dart</span></span>
+                  <span><span>Flutter</span></span>
+                  <span><span>Firebase</span></span>
+                  <span><span>Productivity</span></span>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="big-banner gray">
+      <div class="big-banner-row">
+        <div class="section education-banner" id="education">
+          <div class="section-one-column">
+            <div class="section-header-center">
+              <span class="section-title" id="contact">Get In Touch</span>
+            </div>
+            <div class="section-desc">
+              I'm always looking for opportunities, particularly in game
+              development. If you are looking for talented and passionate
+              individuals, I may just be the developer you are looking for!
+              Let's discuss more in-detail through e-mail, and I'll get back to
+              you as soon as I can.
+            </div>
+            <div class="align-center">
+              <div class="main-interact">
+                <span
+                  class="main-interact-button"
+                  onclick="window.open('mailto:gcciudadano@gmail.com')"
+                  ><span class="main-interact-text">Say Hello</span></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="big-banner">
+      <div class="big-banner-row">
+        <div class="section education-banner" id="education">
+          <div class="section-one-column">
+            <div class="logo">
+              <a href="https://giociudadano.github.io">
+                <img src="assets/icon.png" />
+                <span>Gio Ciudadano</span></a
+              >
+            </div>
+            <div class="section-desc">
+              Designed by © Gio Ciudadano 2023, All Rights Reserved.
             </div>
           </div>
         </div>

@@ -1,7 +1,32 @@
+@media only screen and (max-width: 1170px) {
+  .nav-bar-right {
+    display: none;
+  }
+
+  .nav-bar,
+  .info-banner {
+    padding: 0px 70px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .nav-bar-post > ul > li > a {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 body {
   margin: 0px;
   padding: 0px;
   background-color: rgb(32, 32, 35);
+  display: grid;
+  grid-template: 1fr / 1fr;
+  place-items: center;
+}
+
+a {
+  text-decoration: none;
 }
 
 ul,
@@ -11,9 +36,93 @@ li {
   padding: 0;
 }
 
+.align-center {
+  text-align: center;
+  margin: auto;
+  padding-bottom: 70px;
+}
+
+.nav-bar-post {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 3;
+  overflow: hidden;
+}
+
+.shown {
+  visibility: visible;
+  opacity: 1;
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-bar-post > ul {
+  max-height: 45px;
+  position: fixed;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(45, 45, 48);
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+.nav-bar-post > ul > li {
+  float: left;
+  overflow: hidden;
+}
+
+.nav-bar-post > ul > li > a {
+  display: block;
+  font-family: 'Bahnschrift';
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(215, 215, 215);
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.nav-bar-post > ul > li > a:hover {
+  background-color: rgb(52, 52, 62);
+  color: rgb(235, 175, 255);
+}
+
+.logo {
+  text-transform: uppercase;
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.logo > a {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 4px;
+  color: rgb(245, 245, 245);
+}
+
+.logo > a > img {
+  width: 40px;
+  height: 40px;
+}
+
+li.last-right {
+  margin-right: 12vw;
+}
+
+li > .right {
+  float: right;
+}
+
 .about-me {
   max-height: 100vh;
-  overflow: hidden;
+  height: 100vh;
 }
 
 .icon {
@@ -22,13 +131,12 @@ li {
 }
 
 .nav-banner {
-  margin-top: 50px;
+  padding-top: 50px;
   vertical-align: auto;
 }
 
 .nav-bar {
   margin: auto;
-  width: 85%;
   display: flex;
   flex: 1;
   align-items: center;
@@ -36,7 +144,7 @@ li {
 }
 
 .nav-bar-left {
-  min-width: 300px;
+  width: 450px;
 }
 
 .nav-bar-left-text {
@@ -50,9 +158,8 @@ li {
   text-transform: uppercase;
   font-family: 'Bahnschrift Semicondensed';
   font-weight: 800;
-  font-size: 2em;
+  font-size: 36px;
   color: rgb(245, 245, 245);
-  letter-spacing: 1.5px;
   margin-top: 15px;
   padding-bottom: 0px;
 }
@@ -61,17 +168,11 @@ li {
   text-transform: uppercase;
   font-family: 'Bahnschrift Condensed';
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   color: rgb(215, 215, 215);
-  letter-spacing: 1.2px;
+  letter-spacing: 1.7px;
   display: block;
   margin-top: -5px;
-}
-
-@media only screen and (max-width: 1100px) {
-  .nav-bar-right {
-    display: none;
-  }
 }
 
 .nav-button {
@@ -93,7 +194,6 @@ li {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   overflow: hidden;
   z-index: -1;
 }
@@ -142,7 +242,6 @@ li {
 
 .info-banner {
   margin: 120px auto;
-  width: 85%;
   display: flex;
   flex: 1;
   align-items: center;
@@ -151,19 +250,19 @@ li {
 
 .info-banner-title {
   font-family: 'Bahnschrift';
-  font-weight: 600;
+  font-weight: 800;
   font-size: 55px;
   color: rgb(245, 245, 245);
-  max-width: 600px;
+  max-width: 500px;
   line-height: 0.8;
-  letter-spacing: -1.4px;
+  letter-spacing: -2px;
 }
 
 .info-banner-subtitle {
   margin-top: 10px;
-  font-family: 'Bahnschrift Condensed';
+  font-family: 'Bahnschrift';
   font-weight: 800;
-  font-size: 20px;
+  font-size: 16px;
   background-image: linear-gradient(
     -45deg,
     rgb(85, 153, 255) 0%,
@@ -175,7 +274,7 @@ li {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   max-width: 600px;
-  letter-spacing: 1px;
+  letter-spacing: 4px;
 }
 
 .info-banner-desc {
@@ -193,6 +292,7 @@ li {
   display: flex;
   flex: 1;
   align-items: center;
+  width: 100%;
 }
 
 .media-icon {
@@ -206,11 +306,12 @@ li {
   opacity: 100%;
 }
 
-.view-works {
+.main-interact {
   margin-top: 30px;
+  min-width: 50px;
 }
 
-.view-works-button {
+.main-interact-button {
   border-width: 3px;
   border-style: solid;
   border-image: linear-gradient(
@@ -222,7 +323,7 @@ li {
   padding: 10px 10px;
 }
 
-.view-works-text {
+.main-interact-text {
   font-family: 'Bahnschrift';
   font-weight: 800;
   font-size: 16px;
@@ -241,7 +342,7 @@ li {
   letter-spacing: -0.5px;
 }
 
-.view-works-button:hover {
+.main-interact-button:hover {
   border-width: 3px;
   border-style: solid;
   border-image: linear-gradient(
@@ -255,7 +356,7 @@ li {
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.view-works-text:hover {
+.main-interact-text:hover {
   font-family: 'Bahnschrift';
   font-weight: 800;
   font-size: 16px;
@@ -278,22 +379,36 @@ li {
 }
 
 .big-banner {
-  margin-top: 50px;
-  height: 100vh;
+  background-color: rgb(32, 32, 35);
+  width: 100%;
+}
+
+.gray {
+  background-color: rgb(38, 38, 43);
+}
+
+.black {
+  background-color: rgb(12, 12, 15);
 }
 
 .big-banner-row {
   margin: auto;
   width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 0px;
 }
 
 .education-banner {
   width: max(30%, 320px);
-  float: left;
+  display: inline-block;
+  justify-content: center;
 }
 
 .projects-banner {
-  float: left;
+  margin: auto;
+  width: 55%;
 }
 
 .section {
@@ -302,6 +417,11 @@ li {
 
 .section-header {
   text-align: left;
+  margin: 40px 0px 15px 0px;
+}
+
+.section-header-center {
+  text-align: center;
   margin: 40px 0px 20px 0px;
 }
 
@@ -310,6 +430,24 @@ li {
   font-weight: 600;
   font-size: 28px;
   color: rgb(245, 245, 245);
+}
+
+.section-desc {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 200;
+  font-size: 16px;
+  color: rgb(195, 195, 195);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.section-footer {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 200;
+  font-size: 12px;
+  color: rgb(175, 175, 175);
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .section-tc-entry {
@@ -390,10 +528,10 @@ li {
 
 .experience-card > .time {
   float: left;
-  width: 120px;
+  width: 110px;
   font-family: 'Bahnschrift Semicondensed';
   font-weight: 400;
-  font-size: 13px;
+  font-size: 12px;
   color: rgb(175, 175, 175);
   text-transform: uppercase;
   margin-right: 10px;
@@ -401,10 +539,10 @@ li {
 
 .experience-card > .desc {
   float: left;
-  width: 200px;
+  width: 240px;
 }
 
-.experience-card > .desc > .title {
+.experience-card > .desc > .title > a {
   font-family: 'Bahnschrift Semicondensed';
   font-weight: 400;
   font-size: 16px;
@@ -413,7 +551,7 @@ li {
   line-height: 0.95;
 }
 
-.experience-card:hover > .desc > .title {
+.experience-card:hover > .desc > .title > a {
   color: rgb(235, 175, 255);
 }
 .experience-card:hover > .desc > .external-link {
@@ -442,7 +580,7 @@ li {
 }
 
 .section-mc-entry {
-  margin: 20px 10px;
+  margin: 10px 10px;
   padding: 5px;
   float: left;
   transition: all 1s;
@@ -467,14 +605,14 @@ li {
   max-width: 250px;
 }
 
-.section-mc-info > span > .section-mc-title {
+.section-mc-info > a > span > .section-mc-title {
   font-family: 'Bahnschrift Semicondensed';
   font-weight: 500;
   font-size: 16px;
   color: rgb(245, 245, 245);
 }
 
-.section-mc-entry:hover > .section-mc-info > span > .section-mc-title {
+.section-mc-entry:hover > .section-mc-info > a > span > .section-mc-title {
   color: rgb(235, 175, 255);
 }
 
@@ -488,7 +626,7 @@ li {
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.section-mc-entry:hover > .section-mc-info > span > .external-link {
+.section-mc-entry:hover > .section-mc-info > a > span > .external-link {
   color: rgb(235, 175, 255);
   transform: translate(3px, -3px);
 }
