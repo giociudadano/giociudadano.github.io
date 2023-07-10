@@ -5,7 +5,7 @@ function scrollToSection(sectionName) {
 }
 
 function updateScrollbar(e) {
-  const navBarPost = document.querySelector('.nav-bar-post');
+  const navBarPost = document.querySelector('.nav-bar-sticky');
   let scrollYPos = this.scrollY;
   if (scrollYPos > 200) {
     navBarPost.classList.add('shown');

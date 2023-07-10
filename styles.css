@@ -1,21 +1,3 @@
-@media only screen and (max-width: 1170px) {
-  .nav-bar-right {
-    display: none;
-  }
-
-  .nav-bar,
-  .info-banner {
-    padding: 0px 70px;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .nav-bar-post > ul > li > a {
-    display: none;
-    visibility: hidden;
-  }
-}
-
 body {
   margin: 0px;
   padding: 0px;
@@ -42,7 +24,7 @@ li {
   padding-bottom: 70px;
 }
 
-.nav-bar-post {
+.nav-bar-sticky {
   visibility: hidden;
   opacity: 0;
   transition: all 1s;
@@ -58,7 +40,7 @@ li {
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.nav-bar-post > ul {
+.nav-bar-sticky > ul {
   max-height: 45px;
   position: fixed;
   list-style-type: none;
@@ -71,12 +53,12 @@ li {
   width: 100%;
 }
 
-.nav-bar-post > ul > li {
+.nav-bar-sticky > ul > li {
   float: left;
   overflow: hidden;
 }
 
-.nav-bar-post > ul > li > a {
+.nav-bar-sticky > ul > li > a {
   display: block;
   font-family: 'Bahnschrift';
   font-weight: 500;
@@ -87,7 +69,7 @@ li {
   text-decoration: none;
 }
 
-.nav-bar-post > ul > li > a:hover {
+.nav-bar-sticky > ul > li > a:hover {
   background-color: rgb(52, 52, 62);
   color: rgb(235, 175, 255);
 }
@@ -142,10 +124,6 @@ li > .right {
   justify-content: space-between;
 }
 
-.nav-bar-left {
-  width: 450px;
-}
-
 .nav-bar-left-text {
   vertical-align: top;
   display: inline-block;
@@ -172,6 +150,10 @@ li > .right {
   letter-spacing: 1.7px;
   display: block;
   margin-top: -5px;
+}
+
+.nav-bar-right {
+  margin-left: 10vw;
 }
 
 .nav-button {
@@ -399,15 +381,15 @@ li > .right {
   padding: 50px 0px;
 }
 
-.education-banner {
+.big-banner-row-left {
   width: max(30%, 320px);
   display: inline-block;
   justify-content: center;
 }
 
-.projects-banner {
+.big-banner-row-right {
   margin: auto;
-  width: 55%;
+  width: max(55%, 320px);
 }
 
 .section {
@@ -671,4 +653,183 @@ li > .right {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 1170px) {
+  .nav-bar-right {
+    display: none;
+  }
+
+  .nav-bar,
+  .info-banner {
+    padding: 0px 70px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .nav-bar-sticky > ul > li > a {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (pointer: coarse) {
+  .logo {
+    font-size: 40px;
+    white-space: nowrap;
+  }
+
+  .logo > a > img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .nav-bar-sticky > ul {
+    max-height: 80px;
+  }
+
+  .nav-bar-left {
+    transform-origin: 0% 0%;
+    transform: scale(1.8);
+  }
+
+  .info-banner {
+    margin: 20vh auto;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .info-banner-title {
+    font-size: 100px;
+  }
+
+  .info-banner-subtitle {
+    font-size: 35px;
+  }
+
+  .info-banner-desc {
+    font-size: 30px;
+  }
+
+  .media-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .main-interact-button {
+    border-width: 5px;
+    padding: 30px 20px 20px 20px;
+  }
+
+  .main-interact-text {
+    font-size: 35px;
+    padding: 0px 30px;
+  }
+
+  .main-interact-button:hover {
+    border-width: 5px;
+    padding: 30px 20px 20px 20px;
+  }
+
+  .main-interact-text:hover {
+    font-size: 35px;
+    padding: 0px 30px;
+  }
+
+  .big-banner-row-left {
+    width: 85vw;
+  }
+
+  .section-title {
+    font-size: 72px;
+  }
+
+  .section-desc {
+    font-size: 14px;
+  }
+
+  .experience-card {
+    padding: 30px;
+  }
+
+  .experience-card > .time {
+    font-size: 30px;
+    width: 300px;
+  }
+
+  .experience-card > .desc {
+    width: 800px;
+  }
+
+  .external-link {
+    font-size: 30px;
+  }
+
+  .section-mc-tags > span {
+    padding: 3px 25px;
+  }
+
+  .section-mc-tags > span > span {
+    font-size: 28px;
+  }
+
+  .school-icon {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+  }
+
+  .section-tc-entry-right {
+    width: 800px;
+    margin: 20px;
+  }
+
+  .section-tc-entry-right > span > h1 {
+    font-size: 30px;
+  }
+
+  .section-tc-entry-right > span > h2 {
+    font-size: 30px;
+  }
+
+  .section-tc-entry-right > span > h3 {
+    font-size: 30px;
+  }
+
+  .section-one-column > h2 {
+    font-size: 30px;
+  }
+
+  .section-tc-tags {
+    max-width: 800px;
+    margin: 30px;
+  }
+
+  .section-tc-tags > span {
+    padding: 3px 25px;
+  }
+
+  .section-tc-tags > span > span {
+    font-size: 28px;
+  }
+
+  .big-banner-row-right {
+    width: 100vw;
+  }
+
+  .section-mc-entry {
+    padding: 30px;
+  }
+
+  .section-mc-thumb {
+    width: 800px;
+    height: 480px;
+    margin-bottom: 30px;
+  }
+
+  .section-mc-info {
+    max-width: 800px;
+  }
 }

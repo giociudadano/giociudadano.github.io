@@ -1,3 +1,13 @@
+<!--
+  / __|_ _| | | |   \ /_\ |   \ /_\ | \| |/ _ \ 
+ | (__ | || |_| | |) / _ \| |) / _ \| .` | (_) |
+  \___|___|\___/|___/_/ \_|___/_/ \_|_|\_|\___/
+        Gio Ciudadano's Portfolio Website
+             giociudadano.github.io
+
+        Designed by © Gio Ciudadano 2023
+              All Rights Reserved.
+-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,7 +18,13 @@
     <link rel="icon" href="assets/icon.png" />
   </head>
   <body>
-    <div class="nav-bar-post">
+    <!--
+      [nav-bar-sticky]
+      Defines the sticky navigation bar that appears when the user
+      scrolls down the page. Displays the author's logo and page
+      section tabs.
+    -->
+    <div class="nav-bar-sticky">
       <ul>
         <li style="margin-left: 12vw">
           <div class="logo">
@@ -40,7 +56,17 @@
       </ul>
     </div>
 
+    <!--
+      [about-me]
+      Defines the main landing screen when the user first visits the page.
+      Shows tabs to different page sections, displays author information, and
+      plays a showcase video.
+    -->
     <div class="about-me">
+      <!--
+        [nav-banner]
+        Displays the author's logo and section tabs.
+      -->
       <div class="nav-banner" id="about-me">
         <div class="nav-bar">
           <a href="https://giociudadano.github.io">
@@ -61,7 +87,6 @@
               onclick="scrollToSection('about-me')"
               >About Me</span
             >
-
             <span
               class="nav-button experience"
               onclick="scrollToSection('experience')"
@@ -72,17 +97,14 @@
               onclick="scrollToSection('education')"
               >Education</span
             >
-
             <span
               class="nav-button projects"
               onclick="scrollToSection('projects')"
               >Projects</span
             >
-
             <span class="nav-button skills" onclick="scrollToSection('skills')"
               >Skills</span
             >
-
             <span
               class="nav-button contact"
               onclick="scrollToSection('contact')"
@@ -92,6 +114,10 @@
         </div>
       </div>
 
+      <!--
+        [video-banner]
+        Displays the background video and dynamic gradient.
+      -->
       <div class="video-banner">
         <div class="video-background-gradient"></div>
         <iframe
@@ -103,6 +129,10 @@
         ></iframe>
       </div>
 
+      <!--
+        [info-banner]
+        Displays author information, external links, and project call-to-action.
+      -->
       <div class="info-banner">
         <div class="info-banner-left">
           <div class="info-banner-title">Hi, my name is Gio Ciudadano!</div>
@@ -126,7 +156,9 @@
             </a>
           </div>
           <div class="main-interact">
-            <span class="main-interact-button" onclick="navigateProjects()"
+            <span
+              class="main-interact-button"
+              onclick="scrolltoSection('projects')"
               ><span class="main-interact-text">View Works</span></span
             >
           </div>
@@ -136,7 +168,13 @@
 
     <div class="big-banner">
       <div class="big-banner-row">
-        <div class="section education-banner">
+        <!--
+          [big-banner-row-left]
+          - Displays information on experience, education, and skills.
+          - Defines that the sections are placed above if the display
+            width has insufficient space.
+        -->
+        <div class="section big-banner-row-left">
           <div class="section-two-column">
             <div class="section-header">
               <span class="section-title" id="experience">Experience</span>
@@ -151,8 +189,8 @@
                 >
                 <span class="external-link">🡭</span>
                 <h3>
-                  Developing high-quality and responsive web application that
-                  supports high traffic for clients in Asia.
+                  Developing high-quality and responsive web applications for
+                  clients in the Philippines and in Asia.
                 </h3>
                 <div class="section-mc-tags">
                   <span><span>HTML</span></span>
@@ -183,10 +221,11 @@
               </div>
             </div>
           </div>
-          <div class="section-header">
-            <span class="section-title" id="education">Education</span>
-          </div>
+
           <div class="section-two-column">
+            <div class="section-header">
+              <span class="section-title" id="education">Education</span>
+            </div>
             <div class="section-tc-entry">
               <div class="section-tc-entry-left">
                 <a href="https://up.edu.ph/"
@@ -255,7 +294,13 @@
           </div>
         </div>
 
-        <div class="section projects-banner">
+        <!--
+          [big-banner-row-right]
+          - Contains a list of the author's projects.
+          - Defines that the section is placed below if the
+            display width has insufficient space.
+        -->
+        <div class="section big-banner-row-right">
           <div class="section-header">
             <span class="section-title" id="projects">Projects</span>
           </div>
@@ -320,9 +365,13 @@
       </div>
     </div>
 
+    <!--
+      [big-banner gray]
+      Displays e-mail information of the author.
+    -->
     <div class="big-banner gray">
       <div class="big-banner-row">
-        <div class="section education-banner" id="education">
+        <div class="section big-banner-row-left">
           <div class="section-one-column">
             <div class="section-header-center">
               <span class="section-title" id="contact">Get In Touch</span>
@@ -347,9 +396,14 @@
         </div>
       </div>
     </div>
+
+    <!--
+      [big-banner]
+      Displays footnote information.
+    -->
     <div class="big-banner">
       <div class="big-banner-row">
-        <div class="section education-banner" id="education">
+        <div class="section big-banner-row-left">
           <div class="section-one-column">
             <div class="logo">
               <a href="https://giociudadano.github.io">
