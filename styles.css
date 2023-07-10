@@ -121,7 +121,6 @@ li > .right {
 }
 
 .about-me {
-  max-height: 100vh;
   height: 100vh;
 }
 
@@ -430,6 +429,7 @@ li > .right {
   font-weight: 600;
   font-size: 28px;
   color: rgb(245, 245, 245);
+  scroll-margin-top: 70px;
 }
 
 .section-desc {

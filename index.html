@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <title>Gio Ciudadano</title>
     <script src="scripts.js"></script>
-    <link rel="stylesheet" href="fonts.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="assets/icon.png" />
   </head>
@@ -21,20 +20,22 @@
           >
         </li>
         <li style="float: right" class="last-right">
-          <a onclick="navigateContact()">Contact</a>
-        </li>
-        <li style="float: right"><a onclick="navigateSkills()">Skills</a></li>
-        <li style="float: right">
-          <a onclick="navigateProjects()">Projects</a>
+          <a onclick="scrollToSection('contact')">Contact</a>
         </li>
         <li style="float: right">
-          <a onclick="navigateEducation()">Education</a>
+          <a onclick="scrollToSection('skills')">Skills</a>
         </li>
         <li style="float: right">
-          <a onclick="navigateExperience()">Experience</a>
+          <a onclick="scrollToSection('projects')">Projects</a>
         </li>
         <li style="float: right">
-          <a onclick="navigateAboutMe()">About Me</a>
+          <a onclick="scrollToSection('education')">Education</a>
+        </li>
+        <li style="float: right">
+          <a onclick="scrollToSection('experience')">Experience</a>
+        </li>
+        <li style="float: right">
+          <a onclick="scrollToSection('about-me')">About Me</a>
         </li>
       </ul>
     </div>
@@ -55,26 +56,36 @@
           </a>
 
           <div class="nav-bar-right">
-            <span class="nav-button about-me" onclick="navigateAboutMe()"
+            <span
+              class="nav-button about-me"
+              onclick="scrollToSection('about-me')"
               >About Me</span
             >
 
-            <span class="nav-button experience" onclick="navigateExperience()"
+            <span
+              class="nav-button experience"
+              onclick="scrollToSection('experience')"
               >Experience</span
             >
-            <span class="nav-button education" onclick="navigateEducation()"
+            <span
+              class="nav-button education"
+              onclick="scrollToSection('education')"
               >Education</span
             >
 
-            <span class="nav-button projects" onclick="navigateProjects()"
+            <span
+              class="nav-button projects"
+              onclick="scrollToSection('projects')"
               >Projects</span
             >
 
-            <span class="nav-button skills" onclick="navigateSkills()"
+            <span class="nav-button skills" onclick="scrollToSection('skills')"
               >Skills</span
             >
 
-            <span class="nav-button contact" onclick="navigateContact()"
+            <span
+              class="nav-button contact"
+              onclick="scrollToSection('contact')"
               >Contact</span
             >
           </div>
@@ -125,7 +136,7 @@
 
     <div class="big-banner">
       <div class="big-banner-row">
-        <div class="section education-banner" id="education">
+        <div class="section education-banner">
           <div class="section-two-column">
             <div class="section-header">
               <span class="section-title" id="experience">Experience</span>
@@ -173,7 +184,7 @@
             </div>
           </div>
           <div class="section-header">
-            <span class="section-title">Education</span>
+            <span class="section-title" id="education">Education</span>
           </div>
           <div class="section-two-column">
             <div class="section-tc-entry">
@@ -244,9 +255,9 @@
           </div>
         </div>
 
-        <div class="section projects-banner" id="projects">
+        <div class="section projects-banner">
           <div class="section-header">
-            <span class="section-title">Projects</span>
+            <span class="section-title" id="projects">Projects</span>
           </div>
           <div class="section-multi-column">
             <div class="section-mc-entry">
