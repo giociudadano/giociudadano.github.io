@@ -50,14 +50,14 @@ appToMount.component('hero-section', {
         </div>
 
         <div class="hero-video-container">
-          <!--<iframe
+        <img class="hero-video" src="./assets/hero-fallback-image.png" />
+          <iframe
             class="hero-video"
             src="https://www.youtube.com/embed/uvcxiYZRInE?start=504&autoplay=1&mute=1&controls=0"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-          ></iframe>-->
-          <img class="hero-video" src="./assets/hero-fallback-image.png" />
+          ></iframe>
         </div>
       </div>
       <div class="hero-gradient"></div>
