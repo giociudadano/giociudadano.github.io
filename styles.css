@@ -1,196 +1,194 @@
-body {
-  margin: 0px;
-  padding: 0px;
-  background-color: rgb(32, 32, 35);
-  display: grid;
-  grid-template: 1fr / 1fr;
-  place-items: center;
+/* 
+    Name: style.css
+    Description: Custom CSS for giociudadano.github.io
+    Author: Gio Ciudadano
+*/
+
+/* Helper Classes */
+
+.shown {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-a {
-  text-decoration: none;
+.no-padding {
+  padding: 0rem !important;
 }
 
-ul,
-li {
-  list-style-position: inside;
-  margin: 0;
-  padding: 0;
+.no-padding-h {
+  padding-left: 0rem !important;
+  padding-right: 0rem !important;
 }
 
-.align-center {
-  text-align: center;
-  margin: auto;
-  padding-bottom: 70px;
+.no-padding-v {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
 }
 
-.nav-bar-sticky {
+.no-padding-bottom {
+  padding-bottom: 0rem !important;
+}
+
+.no-margin {
+  margin-bottom: 0rem !important;
+}
+
+.margin-narrow {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.padding-narrow {
+  padding: 0.5rem;
+}
+
+.padding-wide {
+  padding: 2.5rem;
+}
+
+.position-absolute {
+  position: absolute;
+  z-index: 1;
+}
+
+/* Section Classes */
+nav.navbar.is-fixed-top {
   visibility: hidden;
   opacity: 0;
   transition: all 1s;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   z-index: 3;
-  overflow: hidden;
 }
 
-.shown {
-  visibility: visible;
-  opacity: 1;
+.navbar-link {
+  color: rgb(72, 95, 199);
+}
+
+.navbar-dropdown {
+  background-color: rgb(38, 38, 43);
+}
+
+.navbar-divider {
+  background-color: rgb(32, 32, 35);
+}
+
+a.button.is-primary {
+  background-color: rgb(72, 95, 199);
   transition: all 1s;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.nav-bar-sticky > ul {
-  max-height: 45px;
-  position: fixed;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+a.button.is-primary:hover {
+  background-color: rgb(124, 143, 228);
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.column {
+  scroll-margin-top: 70px;
+}
+
+.is-black-1 {
+  background-color: rgb(32, 32, 35);
+}
+
+.is-black-2 {
+  background-color: rgb(38, 38, 43);
+}
+
+.is-black-3 {
   background-color: rgb(45, 45, 48);
-  top: 0;
-  right: 0;
-  width: 100%;
+}
+/* Text Classes */
+.text-website-name {
+  text-transform: uppercase;
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: rgb(245, 245, 245);
 }
 
-.nav-bar-sticky > ul > li {
-  float: left;
-  overflow: hidden;
-}
-
-.nav-bar-sticky > ul > li > a {
-  display: block;
+.text-header-1 {
   font-family: 'Bahnschrift';
-  font-weight: 500;
+  font-weight: 800;
+  font-size: 55px;
+  color: rgb(245, 245, 245);
+  max-width: 500px;
+  line-height: 0.8;
+  letter-spacing: -2px;
+}
+
+.text-header-2 {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 600;
+  font-size: 28px;
+  color: rgb(245, 245, 245);
+}
+
+.text-accent-1 {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 800;
+  font-size: 18px;
+  background-image: linear-gradient(
+    -45deg,
+    rgb(85, 153, 255) 0%,
+    rgb(220, 114, 255) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.text-desc-white {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 200;
   font-size: 14px;
   color: rgb(215, 215, 215);
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
+  text-align: justify;
 }
 
-.nav-bar-sticky > ul > li > a:hover {
-  background-color: rgb(52, 52, 62);
-  color: rgb(235, 175, 255);
-}
-
-.logo {
-  text-transform: uppercase;
+.text-desc-gray {
   font-family: 'Bahnschrift Semicondensed';
-  font-weight: 800;
-  font-size: 22px;
+  font-weight: 200;
+  font-size: 16px;
+  color: rgb(195, 195, 195);
+  line-height: 1.15;
 }
 
-.logo > a {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  padding: 4px;
-  color: rgb(245, 245, 245);
+/* Hero Section */
+.navbar-item > img {
+  max-height: 3rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 
-.logo > a > img {
-  width: 40px;
-  height: 40px;
-}
-
-li.last-right {
-  margin-right: 12vw;
-}
-
-li > .right {
-  float: right;
-}
-
-.about-me {
-  height: 100vh;
-}
-
-.icon {
-  height: 80px;
-  width: 80px;
-}
-
-.nav-banner {
-  padding-top: 50px;
-  vertical-align: auto;
-}
-
-.nav-bar {
-  margin: auto;
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-bar-left-text {
-  vertical-align: top;
-  display: inline-block;
-}
-
-.nav-bar-left-title {
-  display: block;
-  text-align: left;
-  text-transform: uppercase;
-  font-family: 'Bahnschrift Semicondensed';
-  font-weight: 800;
-  font-size: 36px;
-  color: rgb(245, 245, 245);
-  margin-top: 15px;
-  padding-bottom: 0px;
-}
-
-.nav-bar-left-subtitle {
-  text-transform: uppercase;
-  font-family: 'Bahnschrift Condensed';
-  font-weight: 600;
-  font-size: 13px;
-  color: rgb(215, 215, 215);
-  letter-spacing: 1.7px;
-  display: block;
-  margin-top: -5px;
-}
-
-.nav-bar-right {
-  margin-left: 10vw;
-}
-
-.nav-button {
+.navbar-item {
   font-family: 'Bahnschrift';
   font-weight: 400;
   font-size: 16px;
   color: rgb(225, 225, 225);
-  margin: 0px max(20px, 2%);
+  margin-right: 1.5rem;
   letter-spacing: -0.5px;
   cursor: pointer;
 }
 
-.nav-button:hover {
-  color: rgb(235, 175, 255);
+.navbar-item:hover {
+  background-color: transparent !important;
+  color: rgb(235, 175, 255) !important;
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.video-banner {
+.hero-info {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.video-background-gradient {
-  background: linear-gradient(
-    -45deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgb(107, 0, 143) 100%
-  );
-  background-size: 300% 300%;
-  height: 100vh;
-  animation: gradient 10s ease infinite;
-  opacity: 80%;
-  background-color: black;
+  z-index: 2;
+  padding: 3rem;
 }
 
 @keyframes gradient {
@@ -205,79 +203,43 @@ li > .right {
   }
 }
 
-.video-background {
-  filter: grayscale(100%);
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translate(-30%, -50%);
-  margin: auto;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  pointer-events: none;
-  z-index: -2;
-}
-
-.info-banner {
-  margin: 120px auto;
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.info-banner-title {
-  font-family: 'Bahnschrift';
-  font-weight: 800;
-  font-size: 55px;
-  color: rgb(245, 245, 245);
-  max-width: 500px;
-  line-height: 0.8;
-  letter-spacing: -2px;
-}
-
-.info-banner-subtitle {
-  margin-top: 10px;
-  font-family: 'Bahnschrift';
-  font-weight: 800;
-  font-size: 16px;
-  background-image: linear-gradient(
+.hero-gradient {
+  background: linear-gradient(
     -45deg,
-    rgb(85, 153, 255) 0%,
-    rgb(220, 114, 255) 100%
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgb(107, 0, 143) 100%
   );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  max-width: 600px;
-  letter-spacing: 4px;
-}
-
-.info-banner-desc {
-  margin-top: 10px;
-  font-family: 'Bahnschrift Semicondensed';
-  font-weight: 200;
-  font-size: 14px;
-  color: rgb(215, 215, 215);
-  max-width: 600px;
-  text-align: justify;
-}
-
-.media-icons {
-  margin-top: 30px;
-  display: flex;
-  flex: 1;
-  align-items: center;
+  background-size: 300% 300%;
+  height: 100vh;
   width: 100%;
+  animation: gradient 10s ease-out infinite;
+  opacity: 80%;
+  background-color: black;
+  position: absolute;
+  z-index: 0;
+}
+
+.hero-video-fallback {
+  background-image: url(./assets/hero-fallback-image.png);
+}
+
+.hero-video {
+  filter: grayscale(100%);
+  aspect-ratio: 16 / 9;
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
+  width: auto;
+  left: 30%;
+  top: 50%;
+  transform: translate(-30%, -50%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .media-icon {
-  margin: 0px 10px 0px 0px;
   height: 32px;
   width: 32px;
   opacity: 50%;
@@ -285,14 +247,38 @@ li > .right {
 
 .media-icon:hover {
   opacity: 100%;
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.main-interact {
-  margin-top: 30px;
-  min-width: 50px;
+.interact-text {
+  font-family: 'Bahnschrift';
+  font-weight: 800;
+  font-size: 14px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 5px 10px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    45deg,
+    rgb(130, 180, 255) 0%,
+    rgb(230, 153, 255) 100%
+  );
+  background-size: 300% 300%;
+  animation: gradient 3s ease-out infinite;
 }
 
-.main-interact-button {
+.interact-text:hover {
+  text-shadow: 0px 0px 8px rgba(230, 153, 255, 0.3),
+    0px 0px 8px rgba(230, 153, 255, 0.3);
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.interact-text-container {
   border-width: 3px;
   border-style: solid;
   border-image: linear-gradient(
@@ -301,344 +287,94 @@ li > .right {
       rgb(220, 114, 255) 100%
     )
     1;
-  padding: 10px 10px;
+  background-size: 300% 300%;
+  animation: gradient 3s ease-out infinite;
+  padding: 4px 4px;
 }
 
-.main-interact-text {
-  font-family: 'Bahnschrift';
-  font-weight: 800;
-  font-size: 16px;
-  background-image: linear-gradient(
-    -45deg,
-    rgb(85, 153, 255) 0%,
-    rgb(220, 114, 255) 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  padding: 5px 10px;
-  cursor: pointer;
-  letter-spacing: -0.5px;
-}
-
-.main-interact-button:hover {
-  border-width: 3px;
-  border-style: solid;
-  border-image: linear-gradient(
-      45deg,
-      rgb(85, 153, 255) 0%,
-      rgb(220, 114, 255) 100%
-    )
-    1;
-  padding: 10px 10px;
+.interact-text-container:hover {
+  box-shadow: 0px 0px 12px rgba(230, 153, 255, 0.4),
+    0px 0px 12px rgba(230, 153, 255, 0.4);
   transition: all 1s;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.main-interact-text:hover {
-  font-family: 'Bahnschrift';
-  font-weight: 800;
-  font-size: 16px;
-  background-image: linear-gradient(
-    45deg,
-    rgb(85, 153, 255) 0%,
-    rgb(220, 114, 255) 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+/* Experience Cards */
 
-  padding: 5px 10px;
-  cursor: pointer;
-  letter-spacing: -0.5px;
-  transition: all 1s;
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.big-banner {
-  background-color: rgb(32, 32, 35);
-  width: 100%;
-}
-
-.gray {
-  background-color: rgb(38, 38, 43);
-}
-
-.black {
-  background-color: rgb(12, 12, 15);
-}
-
-.big-banner-row {
-  margin: auto;
-  width: 85%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 50px 0px;
-}
-
-.big-banner-row-left {
-  width: max(30%, 320px);
-  display: inline-block;
-  justify-content: center;
-}
-
-.big-banner-row-right {
-  margin: auto;
-  width: max(55%, 320px);
-}
-
-.section {
-  margin: 10px;
-}
-
-.section-header {
-  text-align: left;
-  margin: 40px 0px 15px 0px;
-}
-
-.section-header-center {
-  text-align: center;
-  margin: 40px 0px 20px 0px;
-}
-
-.section-title {
-  font-family: 'Bahnschrift Semicondensed';
-  font-weight: 600;
-  font-size: 28px;
-  color: rgb(245, 245, 245);
-  scroll-margin-top: 70px;
-}
-
-.section-desc {
-  font-family: 'Bahnschrift Semicondensed';
-  font-weight: 200;
-  font-size: 16px;
-  color: rgb(195, 195, 195);
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-.section-footer {
-  font-family: 'Bahnschrift Semicondensed';
-  font-weight: 200;
-  font-size: 12px;
-  color: rgb(175, 175, 175);
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-.section-tc-entry {
-  margin-top: 10px;
-  display: flex;
-  flex: 1;
-  align-items: start;
-}
-
-.section-tc-entry-right > span {
-  display: block;
-}
-
-.section-tc-entry-right > span > h1 {
-  font-family: 'Bahnschrift Semicondensed';
-  font-weight: 400;
-  font-size: 16px;
-  color: rgb(245, 245, 245);
-  margin: 0;
-  line-height: 0.95;
-}
-
-.section-tc-entry-right > span > h2 {
-  font-family: 'Bahnschrift Semicondensed';
-  font-weight: 400;
-  font-size: 14px;
-  color: rgb(215, 215, 215);
-  margin: 0;
-}
-
-.section-tc-entry-right > span > h3 {
-  font-family: 'Bahnschrift Semicondensed';
-  font-weight: 300;
-  font-size: 14px;
-  color: rgb(185, 185, 185);
-  margin: 0;
-}
-
-.school-icon {
-  width: 60px;
-  height: 60px;
-  margin: 12px;
-}
-
-.section-tc-tags {
-  max-width: 300px;
-}
-
-.section-tc-tags > span {
-  padding: 3px 15px;
-  background-color: rgba(235, 235, 235, 0.2);
-  border-radius: 10% / 50%;
-  margin-bottom: 5px;
-  display: inline-block;
-}
-
-.section-tc-tags > span > span {
-  font-family: 'Bahnschrift';
-  font-weight: 400;
-  font-size: 13px;
-  color: rgb(225, 225, 225);
-  letter-spacing: -0.5px;
-}
-
-.experience-card {
-  float: left;
-  padding: 10px;
-  transition: all 1s;
+.hoverable-card {
+  transition: all 0.5s;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   margin-bottom: 20px;
 }
 
-.experience-card:hover {
+.hoverable-card:hover {
   transform: scale(1.05);
   background-color: rgba(245, 245, 245, 0.1);
   border-radius: 10px 5px;
 }
 
-.experience-card > .time {
-  float: left;
-  width: 110px;
+.hoverable-card:hover .title {
+  color: rgb(235, 175, 255);
+}
+
+.hoverable-card:hover .external-link {
+  transform: translate(3px, -3px);
+}
+
+.experience-card > div > .date {
   font-family: 'Bahnschrift Semicondensed';
   font-weight: 400;
   font-size: 12px;
   color: rgb(175, 175, 175);
   text-transform: uppercase;
-  margin-right: 10px;
+  white-space: nowrap;
 }
 
-.experience-card > .desc {
-  float: left;
-  width: 240px;
-}
-
-.experience-card > .desc > .title > a {
+.experience-card > div > a > .title {
   font-family: 'Bahnschrift Semicondensed';
   font-weight: 400;
   font-size: 16px;
   color: rgb(245, 245, 245);
-  margin: 0;
-  line-height: 0.95;
-}
-
-.experience-card:hover > .desc > .title > a {
-  color: rgb(235, 175, 255);
-}
-.experience-card:hover > .desc > .external-link {
-  color: rgb(235, 175, 255);
-  transform: translate(3px, -3px);
-}
-
-.experience-card > .desc > h3 {
-  font-family: 'Bahnschrift Semicondensed';
-  font-weight: 300;
-  font-size: 14px;
-  color: rgb(185, 185, 185);
-  margin-top: 10px;
-}
-
-.section-one-column {
-  margin-top: 40px;
-}
-
-.section-one-column > h2 {
-  font-family: 'Bahnschrift Semicondensed';
-  font-weight: 400;
-  font-size: 16px;
-  color: rgb(215, 215, 215);
-  letter-spacing: -0.5px;
-}
-
-.section-mc-entry {
-  margin: 10px 10px;
-  padding: 5px;
-  float: left;
-  transition: all 1s;
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.section-mc-entry:hover {
-  transform: scale(1.05);
-  background-color: rgba(245, 245, 245, 0.1);
-  border-radius: 2%;
-}
-
-.section-mc-thumb {
-  width: 300px;
-  height: 180px;
-  border-radius: 5%;
+  margin-top: 0;
   margin-bottom: 10px;
-}
-
-.section-mc-info {
-  margin: 5px 10px;
-  max-width: 250px;
-}
-
-.section-mc-info > a > span > .section-mc-title {
-  font-family: 'Bahnschrift Semicondensed';
-  font-weight: 500;
-  font-size: 16px;
-  color: rgb(245, 245, 245);
-}
-
-.section-mc-entry:hover > .section-mc-info > a > span > .section-mc-title {
-  color: rgb(235, 175, 255);
+  line-height: 0.95;
 }
 
 .external-link {
   display: inline-block;
   font-family: 'Bahnschrift Semicondensed';
   font-weight: 100;
-  color: rgb(215, 215, 215);
   font-size: 12px;
   transition: all 0.1s;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.section-mc-entry:hover > .section-mc-info > a > span > .external-link {
-  color: rgb(235, 175, 255);
-  transform: translate(3px, -3px);
-}
-
-.section-mc-info > span > h3 {
+.description {
   font-family: 'Bahnschrift Semicondensed';
   font-weight: 300;
   font-size: 14px;
   color: rgb(185, 185, 185);
-  margin: 10px 0px;
-  text-align: justify;
+  line-height: 1.2;
 }
 
-.section-mc-tags {
-  margin-top: 20px;
+.tags {
+  margin-top: 10px;
 }
 
-.section-mc-tags > span {
+.tags > span {
   padding: 3px 15px;
+  background-color: black;
   background-image: linear-gradient(
     45deg,
-    rgba(85, 153, 255, 0.2) 0%,
-    rgba(220, 114, 255, 0.2) 100%
+    rgba(85, 153, 255, 0.4) 0%,
+    rgba(220, 114, 255, 0.4) 100%
   );
   border-radius: 10% / 50%;
   margin-bottom: 5px;
   display: inline-block;
 }
 
-.section-mc-tags > span > span {
+.tags > span > span {
   font-family: 'Bahnschrift';
   font-weight: 800;
   font-size: 13px;
@@ -650,186 +386,50 @@ li > .right {
   letter-spacing: -0.5px;
   background-size: 100%;
   -webkit-background-clip: text;
-  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
 }
 
-@media only screen and (max-width: 1170px) {
-  .nav-bar-right {
-    display: none;
-  }
+/* Education Cards */
 
-  .nav-bar,
-  .info-banner {
-    padding: 0px 70px;
-  }
+.education-card > div > .title {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(245, 245, 245);
+  line-height: 1;
 }
 
-@media only screen and (max-width: 1000px) {
-  .nav-bar-sticky > ul > li > a {
-    display: none;
-    visibility: hidden;
-  }
+.education-card > div > .subtitle {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(215, 215, 215);
+  margin: 0;
+  line-height: 1;
 }
 
-@media (pointer: coarse) {
-  .logo {
-    font-size: 40px;
-    white-space: nowrap;
-  }
+/* Skills Section */
 
-  .logo > a > img {
-    width: 80px;
-    height: 80px;
-  }
+.skills-card > div > .title {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(215, 215, 215);
+  letter-spacing: -0.3px;
+  margin-bottom: 0.75rem;
+}
 
-  .nav-bar-sticky > ul {
-    max-height: 80px;
-  }
+/* Projects Section */
 
-  .nav-bar-left {
-    transform-origin: 0% 0%;
-    transform: scale(1.8);
-  }
+.project-card > a > img {
+  border-radius: 5%;
+  margin-bottom: 10px;
+}
 
-  .info-banner {
-    margin: 20vh auto;
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .info-banner-title {
-    font-size: 100px;
-  }
-
-  .info-banner-subtitle {
-    font-size: 35px;
-  }
-
-  .info-banner-desc {
-    font-size: 30px;
-  }
-
-  .media-icon {
-    width: 80px;
-    height: 80px;
-  }
-
-  .main-interact-button {
-    border-width: 5px;
-    padding: 30px 20px 20px 20px;
-  }
-
-  .main-interact-text {
-    font-size: 35px;
-    padding: 0px 30px;
-  }
-
-  .main-interact-button:hover {
-    border-width: 5px;
-    padding: 30px 20px 20px 20px;
-  }
-
-  .main-interact-text:hover {
-    font-size: 35px;
-    padding: 0px 30px;
-  }
-
-  .big-banner-row-left {
-    width: 85vw;
-  }
-
-  .section-title {
-    font-size: 72px;
-  }
-
-  .section-desc {
-    font-size: 14px;
-  }
-
-  .experience-card {
-    padding: 30px;
-  }
-
-  .experience-card > .time {
-    font-size: 30px;
-    width: 300px;
-  }
-
-  .experience-card > .desc {
-    width: 800px;
-  }
-
-  .external-link {
-    font-size: 30px;
-  }
-
-  .section-mc-tags > span {
-    padding: 3px 25px;
-  }
-
-  .section-mc-tags > span > span {
-    font-size: 28px;
-  }
-
-  .school-icon {
-    width: 150px;
-    height: 150px;
-    margin: 20px;
-  }
-
-  .section-tc-entry-right {
-    width: 800px;
-    margin: 20px;
-  }
-
-  .section-tc-entry-right > span > h1 {
-    font-size: 30px;
-  }
-
-  .section-tc-entry-right > span > h2 {
-    font-size: 30px;
-  }
-
-  .section-tc-entry-right > span > h3 {
-    font-size: 30px;
-  }
-
-  .section-one-column > h2 {
-    font-size: 30px;
-  }
-
-  .section-tc-tags {
-    max-width: 800px;
-    margin: 30px;
-  }
-
-  .section-tc-tags > span {
-    padding: 3px 25px;
-  }
-
-  .section-tc-tags > span > span {
-    font-size: 28px;
-  }
-
-  .big-banner-row-right {
-    width: 100vw;
-  }
-
-  .section-mc-entry {
-    padding: 30px;
-  }
-
-  .section-mc-thumb {
-    width: 800px;
-    height: 480px;
-    margin-bottom: 30px;
-  }
-
-  .section-mc-info {
-    max-width: 800px;
-  }
+.project-card .title {
+  font-family: 'Bahnschrift Semicondensed';
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(245, 245, 245);
+  margin-bottom: 10px;
 }
